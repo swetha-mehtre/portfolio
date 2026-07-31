@@ -10,6 +10,7 @@
   --accent-2: #c9a86a;    /* brushed gold */
   --accent-3: #34d399;
   --accent-4: #8b93a0;
+  --pop: #ff3b4a;
   --metal: linear-gradient(120deg, #6b6f76 0%, #e8ebef 22%, #9a9ea6 38%, #f5f7f9 50%, #8b8f97 62%, #dfe3e8 78%, #5f636b 100%);
   --metal-gold: linear-gradient(120deg, #6b552c 0%, #e9cf94 22%, #a9834a 38%, #fdf1cf 50%, #b3874e 62%, #ecd6a1 78%, #5c4926 100%);
   --grad: var(--metal);
@@ -27,58 +28,61 @@
   color-scheme: dark;
 }
 
-/* Light theme — modern, clean (Apple/Google/Netflix-style): soft neutral surfaces,
-   restrained shadows, and a legible dark-slate "metal" gradient instead of gold-on-white. */
+/* Light theme — "brushed silver" (think Diet Coke can: chrome, black, a punch of red),
+   not flat white paper. Steel-gray surfaces with real gradient depth, dark high-contrast
+   text, and a bold red pop accent alongside the gold for CTAs/badges. */
 :root[data-theme="light"] {
-  --bg: #f5f5f7;
-  --bg-alt: #ffffff;
-  --surface: #ffffff;
-  --surface-2: #f0f1f3;
-  --border: #e2e3e7;
-  --text: #1d1d1f;
-  --text-dim: #6e6e73;
-  --accent: #3a3a3c;
-  --accent-2: #b5842a;
-  --accent-3: #1a8f5e;
-  --accent-4: #6e6e73;
-  --metal: linear-gradient(120deg, #2b2d33 0%, #4a4d55 30%, #1d1e22 55%, #3a3d44 80%, #1a1b1e 100%);
-  --metal-gold: linear-gradient(120deg, #8a6118 0%, #c9932f 25%, #a97416 50%, #dba838 75%, #8a6118 100%);
-  --vivid-1: #ff4d6d;
-  --vivid-2: #8b3fe0;
-  --vivid-3: #2563eb;
-  --vivid-4: #0891b2;
+  --bg: #cfd2d6;
+  --bg-alt: #dde0e3;
+  --surface: #eef0f2;
+  --surface-2: #d7dadd;
+  --border: #aeb2b8;
+  --text: #16171a;
+  --text-dim: #4a4d52;
+  --accent: #16171a;
+  --accent-2: #a8681c;
+  --accent-3: #0d7a4e;
+  --accent-4: #52565c;
+  --pop: #d81324;
+  --metal: linear-gradient(120deg, #494b50 0%, #8a8d93 25%, #16171a 50%, #74777d 75%, #26272b 100%);
+  --metal-gold: linear-gradient(120deg, #7a5210 0%, #c9932f 25%, #8a5c11 50%, #dba838 75%, #6b480e 100%);
+  --vivid-1: #d81324;
+  --vivid-2: #7c1fb8;
+  --vivid-3: #0d4fc4;
+  --vivid-4: #067a99;
   --vivid-grad: linear-gradient(120deg, var(--vivid-1), var(--vivid-2) 35%, var(--vivid-3) 65%, var(--vivid-4));
-  --shadow-sm: 0 1px 0 rgba(255,255,255,0.5) inset, 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 2px 6px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.06);
-  --shadow-lg: 0 16px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(181,132,42,0.15);
-  --shadow-hero: 0 20px 50px rgba(0,0,0,0.10);
+  --shadow-sm: 0 1px 0 rgba(255,255,255,0.6) inset, 0 2px 4px rgba(0,0,0,0.14), 0 1px 2px rgba(0,0,0,0.10);
+  --shadow-md: 0 2px 4px rgba(0,0,0,0.12), 0 12px 28px rgba(0,0,0,0.18);
+  --shadow-lg: 0 20px 48px rgba(0,0,0,0.28), 0 0 0 1px rgba(168,104,28,0.25);
+  --shadow-hero: 0 24px 60px rgba(0,0,0,0.24);
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) {
-    --bg: #f5f5f7;
-    --bg-alt: #ffffff;
-    --surface: #ffffff;
-    --surface-2: #f0f1f3;
-    --border: #e2e3e7;
-    --text: #1d1d1f;
-    --text-dim: #6e6e73;
-    --accent: #3a3a3c;
-    --accent-2: #b5842a;
-    --accent-3: #1a8f5e;
-    --accent-4: #6e6e73;
-    --metal: linear-gradient(120deg, #2b2d33 0%, #4a4d55 30%, #1d1e22 55%, #3a3d44 80%, #1a1b1e 100%);
-    --metal-gold: linear-gradient(120deg, #8a6118 0%, #c9932f 25%, #a97416 50%, #dba838 75%, #8a6118 100%);
-    --vivid-1: #ff4d6d;
-    --vivid-2: #8b3fe0;
-    --vivid-3: #2563eb;
-    --vivid-4: #0891b2;
+    --bg: #cfd2d6;
+    --bg-alt: #dde0e3;
+    --surface: #eef0f2;
+    --surface-2: #d7dadd;
+    --border: #aeb2b8;
+    --text: #16171a;
+    --text-dim: #4a4d52;
+    --accent: #16171a;
+    --accent-2: #a8681c;
+    --accent-3: #0d7a4e;
+    --accent-4: #52565c;
+    --pop: #d81324;
+    --metal: linear-gradient(120deg, #494b50 0%, #8a8d93 25%, #16171a 50%, #74777d 75%, #26272b 100%);
+    --metal-gold: linear-gradient(120deg, #7a5210 0%, #c9932f 25%, #8a5c11 50%, #dba838 75%, #6b480e 100%);
+    --vivid-1: #d81324;
+    --vivid-2: #7c1fb8;
+    --vivid-3: #0d4fc4;
+    --vivid-4: #067a99;
     --vivid-grad: linear-gradient(120deg, var(--vivid-1), var(--vivid-2) 35%, var(--vivid-3) 65%, var(--vivid-4));
-    --shadow-sm: 0 1px 0 rgba(255,255,255,0.5) inset, 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-    --shadow-md: 0 2px 6px rgba(0,0,0,0.06), 0 8px 20px rgba(0,0,0,0.06);
-    --shadow-lg: 0 16px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(181,132,42,0.15);
-    --shadow-hero: 0 20px 50px rgba(0,0,0,0.10);
+    --shadow-sm: 0 1px 0 rgba(255,255,255,0.6) inset, 0 2px 4px rgba(0,0,0,0.14), 0 1px 2px rgba(0,0,0,0.10);
+    --shadow-md: 0 2px 4px rgba(0,0,0,0.12), 0 12px 28px rgba(0,0,0,0.18);
+    --shadow-lg: 0 20px 48px rgba(0,0,0,0.28), 0 0 0 1px rgba(168,104,28,0.25);
+    --shadow-hero: 0 24px 60px rgba(0,0,0,0.24);
     color-scheme: light;
   }
   :root:not([data-theme="dark"]) .project-card::after { display: none; }
@@ -100,10 +104,18 @@ body {
   transition: background .3s ease, color .3s ease;
 }
 :root[data-theme="light"] body {
-  background: var(--bg);
+  background:
+    radial-gradient(1400px circle at 50% -10%, rgba(255,255,255,0.5), transparent 55%),
+    radial-gradient(900px circle at 90% 100%, rgba(0,0,0,0.06), transparent 60%),
+    linear-gradient(180deg, #d6d9dc 0%, var(--bg) 40%, #b9bcc1 100%);
 }
 @media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) body { background: var(--bg); }
+  :root:not([data-theme="dark"]) body {
+    background:
+      radial-gradient(1400px circle at 50% -10%, rgba(255,255,255,0.5), transparent 55%),
+      radial-gradient(900px circle at 90% 100%, rgba(0,0,0,0.06), transparent 60%),
+      linear-gradient(180deg, #d6d9dc 0%, var(--bg) 40%, #b9bcc1 100%);
+  }
 }
 
 h1, h2, h3, h4, .brand, .btn, .stat .n, .filter-chip { font-family: 'Sora', 'Segoe UI', system-ui, sans-serif; }
@@ -500,8 +512,8 @@ a:hover { text-decoration: underline; }
 }
 .featured-ribbon {
   position: absolute; top: 14px; right: -34px; z-index: 6;
-  background: var(--metal-gold); background-size: 200% auto; color: #241b0a; font-size: .68rem; font-weight: 800;
-  padding: 5px 40px; transform: rotate(35deg); box-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.4) inset;
+  background: var(--pop); color: #fff; font-size: .68rem; font-weight: 800;
+  padding: 5px 40px; transform: rotate(35deg); box-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.35) inset;
   letter-spacing: .5px;
 }
 .project-card .thumb {
