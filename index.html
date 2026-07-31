@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Swetha — Software Engineer & Data Analyst</title>
+<meta name="description" content="Portfolio of Swetha — Software Engineer & Data Analyst. AI/ML, Data Analytics, and full-stack projects." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="brand">SWETHA<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button id="themeToggle" class="switch" aria-label="Toggle theme"><span class="switch-knob"></span></button>
+  </div>
+</nav>
+
+<header id="home" class="hero">
+  <canvas id="fx"></canvas>
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-frame">
+    <div class="hero-content">
+      <div class="avatar-wrap reveal">
+        <div class="float-badge fb1">🐍 Python</div>
+        <div class="float-badge fb2">⚛ React</div>
+        <div class="float-badge fb3">🧠 ML</div>
+        <div class="float-badge fb4">📊 Power BI</div>
+        <div class="avatar-ring">
+          <div class="avatar" id="avatar"></div>
+        </div>
+        <span class="status-dot"></span>
+      </div>
+      <p class="eyebrow reveal">Hello, I'm</p>
+      <h1 class="reveal"><span id="typedName"></span></h1>
+      <h2 class="tagline reveal" id="rotatingTagline"></h2>
+      <p class="hero-desc reveal">
+        Building production-style ML pipelines, Flask APIs, and data-driven dashboards.
+        Kaggle Bronze Medalist. VTU CGPA 8.36/10.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-stats reveal" id="heroStats"></div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll down">↓</a>
+</header>
+
+<main>
+  <section id="about" class="section">
+    <h2 class="section-title reveal"><span class="num">01.</span> About</h2>
+    <div class="about-grid reveal">
+      <p class="summary" id="summaryText"></p>
+      <div class="skills" id="skillsBox"></div>
+    </div>
+  </section>
+
+  <section id="experience" class="section alt">
+    <h2 class="section-title reveal"><span class="num">02.</span> Experience</h2>
+    <div class="timeline" id="timeline"></div>
+
+    <div class="edu-card reveal" id="eduCard"></div>
+  </section>
+
+  <section id="projects" class="section wide">
+    <h2 class="section-title reveal"><span class="num">03.</span> Projects</h2>
+    <p class="section-sub reveal">Pulled live from <a id="ghLink" href="https://github.com/swetha-mehtre" target="_blank" rel="noopener">github.com/swetha-mehtre</a>, cloned, fixed, and tested. Scroll each row →</p>
+
+    <div class="project-controls reveal">
+      <input type="text" id="projectSearch" placeholder="Search projects…" />
+      <div class="filter-chips" id="filterChips"></div>
+    </div>
+
+    <div id="projectRows"></div>
+    <p class="empty-state" id="emptyState" hidden>No projects match that search/filter.</p>
+  </section>
+
+  <section id="highlights" class="section alt wide">
+    <h2 class="section-title reveal"><span class="num">04.</span> Highlights from LinkedIn</h2>
+    <p class="section-sub reveal">Publications, certifications, and achievements — each links to its source or verification.</p>
+    <div class="netflix-row" id="highlightRow"></div>
+  </section>
+
+  <section id="contact" class="section alt contact-section">
+    <h2 class="section-title reveal"><span class="num">05.</span> Get In Touch</h2>
+    <p class="reveal">Open to Software Engineer / Data Analyst roles. Immediately available. Reach out below.</p>
+    <div class="contact-links reveal" id="contactLinks"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Built by Swetha · <span id="year"></span></p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
